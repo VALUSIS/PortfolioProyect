@@ -7,6 +7,11 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -17,7 +22,9 @@ body {
   height: 25px;
   padding: 0px;
 }
-
+.main__conte {
+  flex: 1;
+}
 .main__div--imgsup {
   position: relative;
   width: 100%;
@@ -218,10 +225,12 @@ text-transform: uppercase;
       background: linear-gradient(to bottom, #a8a8a8, #000000);
       background-repeat: no-repeat;
       background-size: cover;
+      min-height: 100vh;
       height: 100%;
       margin: 0;
       padding: 0;
-      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
   }
   
   .main__div--imgsup {
@@ -275,7 +284,9 @@ text-transform: uppercase;
   }
 
   .div__card--3 {
-    margin: 5px;
+    width: 100%;  
+    height: auto; 
+    object-fit: cover;
   }
 
   .div__card--4 {
@@ -284,23 +295,22 @@ text-transform: uppercase;
 
   .div__igcon {
     display: flex;
-    justify-content: left;
-    align-items: baseline;    
-    gap: 2px; 
-  }
-  .main__iglogo {
-    width: 45px;         
-    height: auto;     
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    gap: 8px;                /* Espacio entre logo y link */
+    padding: 1rem
   }
   
   .main__iglogo {
-      display: block;
-      margin-top: 5px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 15%;
-      border-radius: 0%;
-  
+    width: 45px;
+    height: auto;
+    display: block;
+  }
+
+  .div__iglink {
+    display: flex;
+    align-items: center;  
+    margin-top: 15%;
   }
   
   .main__cars {
