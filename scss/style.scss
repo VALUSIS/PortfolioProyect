@@ -1,6 +1,14 @@
+$color-paleta-1:  #e6dfdc;
+$color-paleta-2:  #1a2122;
+$color-paleta-3:  #797069;
+$color-paleta-4:  #0d6cfa;
+$color-paleta-5:  #95a3a2;
+$color-paleta-6:  #4c4845;
+$color-paleta-7:  #54676e; 
+$color-paleta-8:  #3a4546; 
 body {
     width: 100%;
-    background: linear-gradient(to bottom, #a8a8a8, #000000);
+    background: linear-gradient(to bottom,$color-paleta-1,$color-paleta-2);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
