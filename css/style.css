@@ -1,3 +1,11 @@
+.nav__logo {
+  position: sticky;
+  align-items: center;
+  margin-bottom: 1px;
+  height: 25px;
+  padding: 0;
+}
+
 body {
   width: 100%;
   background: linear-gradient(to bottom, #e6dfdc, #1a2122);
@@ -7,19 +15,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  height: 100%;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
-}
-
-.nav__logo {
-  position: sticky;
-  align-items: center;
-  margin-bottom: 1px;
-  height: 25px;
-  padding: 0px;
 }
 
 .main__conte {
@@ -49,15 +46,13 @@ body {
   width: 100px;
   height: auto;
   border-radius: 10px;
-  border-color: white;
+  border-color: #e6dfdc;
   opacity: 90%;
 }
 
-.div__mypicpc {
-  display: none;
-}
-
-.main__textpc {
+.div__mypicpc,
+.main__textpc,
+.main__card--2 {
   display: none;
 }
 
@@ -67,10 +62,6 @@ body {
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
-}
-
-.main__card--2 {
-  display: none;
 }
 
 .div__igcon {
@@ -112,7 +103,7 @@ body {
 
 .body__aboutme {
   background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  color: #e6dfdc;
   padding: 20px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -142,7 +133,7 @@ body {
 
 .body__tips {
   background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  color: #e6dfdc;
   padding: 20px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -170,7 +161,7 @@ body {
 
 .main__forms {
   background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  color: #e6dfdc;
   padding: 20px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -204,14 +195,9 @@ body {
 
 @media (min-width: 768px) {
   .main__mypic {
-    position: absolute;
     top: 115px;
     left: 60px;
     width: 250px;
-    height: auto;
-    border-radius: 10px;
-    border-color: white;
-    opacity: 90%;
   }
   .div__button {
     width: 50%;
@@ -219,25 +205,12 @@ body {
 }
 @media (min-width: 1024px) {
   body {
-    width: 100%;
     background: linear-gradient(to bottom, #a8a8a8, #000000);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
   }
   .main__div--imgsup {
-    position: relative;
-    width: 100%;
     height: auto;
   }
   .main__conte {
-    position: relative;
-    width: 100%;
     height: 300px;
   }
   .main__banner {
@@ -250,14 +223,10 @@ body {
     display: none;
   }
   .main__mypic {
-    position: absolute;
     top: -100px;
     left: 90%;
     transform: translate(-50%, -50%);
     width: 100px;
-  }
-  .main__textpc {
-    display: none;
   }
   .main__card {
     display: none;
@@ -266,30 +235,23 @@ body {
     display: flex;
     align-items: center;
   }
-  .div__card--1 {
-    margin: 10px;
-  }
-  .div__card--2 {
-    margin: 10px;
+  .div__card--1,
+  .div__card--2,
+  .div__card--4 {
+    margin: 10px 15px;
   }
   .div__card--3 {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
-  .div__card--4 {
-    margin: 15px;
-  }
   .div__igcon {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    gap: 8px; /* Espacio entre logo y link */
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     padding: 1rem;
   }
   .main__iglogo {
-    width: 45px;
-    height: auto;
     display: block;
   }
   .div__iglink {
@@ -298,35 +260,28 @@ body {
     margin-top: 15%;
   }
   .main__cars {
-    width: 100%;
     align-items: center;
   }
   .div__cars--img1 {
     width: 400px;
-    margin: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
     padding: 5px;
     margin-top: 20px;
     height: auto;
     display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   }
-  .div2__con--1 {
-    display: flex;
-    width: 100%;
-  }
-  .div2__con--2 {
-    display: flex;
-    width: 100%;
-  }
+  .div2__con--1,
+  .div2__con--2,
   .div2__con--3 {
     display: flex;
     width: 100%;
   }
-  .body__aboutme {
+  .body__aboutme,
+  .body__tips,
+  .main__forms {
     background: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    color: #e6dfdc;
     padding: 20px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -351,23 +306,6 @@ body {
     margin-bottom: 10px;
     padding: 0 10px;
   }
-  .body__tips {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
-    margin: 10px 0;
-    width: 85%;
-    max-width: 500px;
-    display: block;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-  }
   .main__texttips {
     font-size: 18px;
   }
@@ -375,23 +313,6 @@ body {
     text-align: center;
     margin-top: 20px;
     color: #000000;
-  }
-  .main__forms {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
-    margin: 10px 0;
-    width: 85%;
-    max-width: 500px;
-    display: block;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
   }
   .form__email {
     margin-top: 0px;
