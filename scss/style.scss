@@ -6,7 +6,7 @@ $color-paleta-5:  #95a3a2;
 $color-paleta-6:  #4c4845;
 $color-paleta-7:  #54676e; 
 $color-paleta-8:  #3a4546; 
-
+@use 'iglink';
 @use 'navbar';
 @mixin glass-box {
     background: rgba(0, 0, 0, 0.6);       
@@ -41,6 +41,7 @@ $color-paleta-8:  #3a4546;
   
   .main__conte {
     flex: 1;
+    
   }
   
   .main__div--imgsup {
@@ -82,27 +83,6 @@ $color-paleta-8:  #3a4546;
     padding: 20px;
     box-sizing: border-box; 
     text-align: center;
-  }
-  
-  .div__igcon {
-    display: flex;
-    justify-content: left;
-    align-items: baseline;    
-    gap: 2px; 
-  }
-  
-  .main__iglogo {
-    width: 45px;         
-    height: auto;     
-  }
-  
-  .div__iglink {
-    background: linear-gradient(90deg, #b700ff, #ff00b3, #dbf84d);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 18px;
-    text-transform: uppercase;
   }
   
   .main__cars {
@@ -235,23 +215,6 @@ $color-paleta-8:  #3a4546;
       object-fit: cover;
     }
   
-    .div__igcon {
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      padding: 1rem;
-    }
-  
-    .main__iglogo {
-      display: block;
-    }
-  
-    .div__iglink {
-      display: flex;
-      align-items: center;
-      margin-top: 15%;
-    }
-  
     .main__cars {
       align-items: center;
     }
@@ -316,5 +279,10 @@ $color-paleta-8:  #3a4546;
       margin-left: auto;
       margin-right: auto;
     }
+
+    .main__div--imgsup {
+      background-color: #000000;
+    }
+
   }
   

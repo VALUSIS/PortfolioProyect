@@ -1,3 +1,40 @@
+.div__igcon {
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.main__iglogo {
+  width: 45px;
+  height: auto;
+}
+
+.div__iglink {
+  background: linear-gradient(90deg, #b700ff, #ff00b3, #dbf84d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .div__igcon {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem;
+  }
+  .main__iglogo {
+    display: block;
+  }
+  .div__iglink {
+    display: flex;
+    align-items: center;
+    margin-top: 15%;
+  }
+}
 .nav__logo {
   position: sticky;
   align-items: center;
@@ -62,27 +99,6 @@ body {
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
-}
-
-.div__igcon {
-  display: flex;
-  justify-content: left;
-  align-items: baseline;
-  gap: 2px;
-}
-
-.main__iglogo {
-  width: 45px;
-  height: auto;
-}
-
-.div__iglink {
-  background: linear-gradient(90deg, #b700ff, #ff00b3, #dbf84d);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 18px;
-  text-transform: uppercase;
 }
 
 .main__cars {
@@ -245,20 +261,6 @@ body {
     height: auto;
     object-fit: cover;
   }
-  .div__igcon {
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding: 1rem;
-  }
-  .main__iglogo {
-    display: block;
-  }
-  .div__iglink {
-    display: flex;
-    align-items: center;
-    margin-top: 15%;
-  }
   .main__cars {
     align-items: center;
   }
@@ -326,6 +328,9 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+  .main__div--imgsup {
+    background-color: #000000;
   }
 }
 
