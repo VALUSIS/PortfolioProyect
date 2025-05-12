@@ -1,4 +1,3 @@
-
 .div__igcon {
   display: flex;
   justify-content: left;
@@ -53,7 +52,6 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
 }
@@ -87,12 +85,6 @@ body {
   border-radius: 10px;
   border-color: #e6dfdc;
   opacity: 90%;
-}
-
-.div__mypicpc,
-.main__textpc,
-.main__card--2 {
-  display: none;
 }
 
 .main__card {
@@ -149,7 +141,7 @@ body {
   padding: 0 10px;
 }
 
-.body__tips {        
+.body__tips {
   background: rgba(0, 0, 0, 0.6);
   color: #e6dfdc;
   padding: 20px;
@@ -175,7 +167,8 @@ body {
   text-align: center;
   margin-top: 20px;
   color: #000000;
-}          
+}
+
 .main__forms {
   background: rgba(0, 0, 0, 0.6);
   color: #e6dfdc;
