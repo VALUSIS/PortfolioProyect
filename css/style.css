@@ -93,6 +93,39 @@ body {
   display: none;
 }
 
+.div__aboutme {
+  display: block;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+.div__aboutme img {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+  opacity: 95%;
+}
+.div__aboutme h1 {
+  text-align: center;
+  color: #e6dfdc;
+  margin-top: 10px;
+}
+.div__aboutme p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  text-align: center;
+  color: #e6dfdc;
+  margin-top: 10px;
+  width: 80%;
+}
+
 .main__card {
   width: 100%;
   margin: 0;
