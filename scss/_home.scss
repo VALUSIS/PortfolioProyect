@@ -59,6 +59,17 @@ $color-paleta-8:  #3a4546;
     object-fit: cover;
   }
   
+  .main__button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
   .main__mypic {
     position: absolute;
     top: 60px; 
@@ -111,3 +122,93 @@ $color-paleta-8:  #3a4546;
         width: 80%;
     }
   }
+
+   @media (min-width: 1024px) {
+        body {
+      background: linear-gradient(to bottom, #a8a8a8, #000000);
+    }
+  
+    .main__div--imgsup {
+      height: auto;
+    }
+  
+    .main__conte {
+      height: 300px;
+    }
+  
+    .main__banner {
+            position: relative; 
+      width: 100%;
+      max-width: 1000px; 
+    }
+
+    .div__banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    }
+
+    .main__banner :hover {
+      width: 110%;
+    }
+
+    .main__button {
+      position: absolute; 
+      bottom: 450px; 
+      right: 80px; 
+      background-color: $color-paleta-1;
+      color: rgb(0, 0, 0);
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1.2em;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+  
+    .main__imgprincipal {
+      display: none;
+    }
+  
+    .main__mypic {
+      top: -100px;
+      left: 90%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+    }
+
+  .div__principal {
+      display: grid;
+      grid-template-columns: auto auto; 
+      gap: 20px;
+      padding: 20px;
+      align-items: flex-start; 
+  }
+
+  .div__aboutme {
+          width: 100%;
+      height: auto;
+      max-height: 90vh;
+      object-fit: cover;
+      img {
+        width: 70%;
+      }
+  }
+
+    .div__aboutme--1 {
+            display: block;
+            margin-top: 20px;
+
+      h1 {
+              margin-bottom: 15px;
+      font-size: 2em;
+      color: $color-paleta-1;
+      }
+
+      p {
+              font-size: 1.2em;
+      color: $color-paleta-1;
+      }
+  }
+   }
