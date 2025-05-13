@@ -76,6 +76,17 @@ body {
   object-fit: cover;
 }
 
+.main__button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
 .main__mypic {
   position: absolute;
   top: 60px;
@@ -87,6 +98,121 @@ body {
   opacity: 90%;
 }
 
+.div__mypicpc,
+.main__textpc,
+.main__card--2 {
+  display: none;
+}
+
+.div__aboutme {
+  display: block;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+.div__aboutme img {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+  opacity: 95%;
+}
+.div__aboutme h1 {
+  text-align: center;
+  color: #e6dfdc;
+  margin-top: 10px;
+}
+.div__aboutme p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  text-align: center;
+  color: #e6dfdc;
+  margin-top: 10px;
+  width: 80%;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: linear-gradient(to bottom, #a8a8a8, #000000);
+  }
+  .main__div--imgsup {
+    height: auto;
+  }
+  .main__conte {
+    height: 300px;
+  }
+  .main__banner {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+  }
+  .div__banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .main__banner :hover {
+    width: 110%;
+  }
+  .main__button {
+    position: absolute;
+    bottom: 450px;
+    right: 80px;
+    background-color: #e6dfdc;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  .main__imgprincipal {
+    display: none;
+  }
+  .main__mypic {
+    top: -100px;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+  }
+  .div__principal {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+  }
+  .div__aboutme {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+  }
+  .div__aboutme img {
+    width: 70%;
+  }
+  .div__aboutme--1 {
+    display: block;
+    margin-top: 20px;
+  }
+  .div__aboutme--1 h1 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: #e6dfdc;
+  }
+  .div__aboutme--1 p {
+    font-size: 1.2em;
+    color: #e6dfdc;
+  }
+}
 .main__card {
   width: 100%;
   margin: 0;
@@ -203,41 +329,7 @@ body {
   margin-right: auto;
 }
 
-@media (min-width: 768px) {
-  .main__mypic {
-    top: 115px;
-    left: 60px;
-    width: 250px;
-  }
-  .div__button {
-    width: 50%;
-  }
-}
 @media (min-width: 1024px) {
-  body {
-    background: linear-gradient(to bottom, #a8a8a8, #000000);
-  }
-  .main__div--imgsup {
-    height: auto;
-  }
-  .main__conte {
-    height: 300px;
-  }
-  .main__banner {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  .main__imgprincipal {
-    display: none;
-  }
-  .main__mypic {
-    top: -100px;
-    left: 90%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-  }
   .main__card {
     display: none;
   }
