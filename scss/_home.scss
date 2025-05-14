@@ -52,6 +52,10 @@ $color-paleta-8:  #3a4546;
   .main__banner {
     display: none;
   }
+
+  .div__banner {
+    display: none;
+  }
   
   .main__imgprincipal {
     width: 100%;
@@ -59,16 +63,13 @@ $color-paleta-8:  #3a4546;
     object-fit: cover;
   }
   
-  .main__button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
+.main__button {
+display: none;
+}
+
+.main__button:hover {
+  background-color: #e6c200;
+}
 
   .main__mypic {
     position: absolute;
@@ -152,25 +153,42 @@ $color-paleta-8:  #3a4546;
     .main__banner :hover {
       width: 110%;
     }
-
-    .main__button {
-      position: absolute; 
-      bottom: 450px; 
-      right: 80px; 
-      background-color: $color-paleta-1;
-      color: rgb(0, 0, 0);
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1.2em;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
   
     .main__imgprincipal {
       display: none;
     }
-  
+
+    .main__button--1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .main__button {
+  display: flex; 
+  justify-content: center; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  align-items: center;    
+  background-color: $color-paleta-4;
+  color: $color-paleta-1;
+  width: 15%;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 50px; 
+    }
+
+.main__button:hover {
+  background-color: #e6c200;
+  }
     .main__mypic {
       top: -100px;
       left: 90%;
