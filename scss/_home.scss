@@ -1,232 +1,249 @@
-$color-paleta-1:  #e6dfdc;
-$color-paleta-2:  #1a2122;
-$color-paleta-3:  #797069;
-$color-paleta-4:  #0d6cfa;
-$color-paleta-5:  #95a3a2;
-$color-paleta-6:  #4c4845;
-$color-paleta-7:  #54676e; 
-$color-paleta-8:  #3a4546; 
+// Variables
+$color-paleta-1: #e6dfdc;
+$color-paleta-2: #1a2122;
+$color-paleta-3: #797069;
+$color-paleta-4: #0d6cfa;
+$color-paleta-5: #95a3a2;
+$color-paleta-6: #4c4845;
+$color-paleta-7: #54676e;
+$color-paleta-8: #3a4546;
 
-@mixin glass-box {
-    background: rgba(0, 0, 0, 0.6);       
-    color: $color-paleta-1;
-    padding: 20px;
-    border-radius: 12px;                 
-    border: 1px solid rgba(255, 255, 255, 0.2);  
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4); 
-    backdrop-filter: blur(4px);           
-    margin: 10px 0;
-    width: 85%;
-    max-width: 500px;
-    display: block;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-  }
+// Mixin para glass-box con opciones
+@mixin glass-box($bg-color: rgba(0, 0, 0, 0.6), $text-color: $color-paleta-1) {
+  background: $bg-color;
+  color: $text-color;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  margin: 20px auto 10px auto;
+  width: 85%;
+  max-width: 500px;
+  display: block;
+  align-items: center;
+}
 
-  body {
-    width: 100%;
-    background: linear-gradient(to bottom, $color-paleta-1, $color-paleta-2);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
+// Body y estructura principal
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, $color-paleta-1, $color-paleta-2);
+  background-repeat: no-repeat;
+  background-size: cover;
+
   .main__conte {
     flex: 1;
-    
   }
-  
+}
+
+// Imagen superior
+.main__div--imgsup {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+// Banner y div_banner ocultos para móvil
+.main__banner,
+.div__banner {
+  display: none;
+}
+
+// Imagen principal para móvil
+.main__imgprincipal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Botón oculto para móvil
+.main__button {
+  display: none;
+
+  &:hover {
+    background-color: #e6c200;
+  }
+}
+
+// Imagen de perfil principal
+.main__mypic {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid $color-paleta-1;
+  opacity: 0.9;
+}
+
+
+.div__mypicpc,
+.main__textpc,
+.main__card--2 {
+  display: none;
+}
+
+.div__aboutme {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+        width: 100%;
+    max-width: 300px !important;
+    height: auto !important;
+    max-height: 250px !important;
+    object-fit: cover;
+    border-radius: 15px;
+    opacity: 0.95;
+    display: block;
+    margin: 1rem auto;
+  }
+}
+
+.div__aboutme--1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  h1 {
+    text-align: center;
+    color: $color-paleta-1;
+    margin-top: 5px;
+  }
+
+  p {
+    width: 80%;
+    margin: 10px auto 0 auto;
+    font-size: 15px;
+    text-align: center;
+    color: white; 
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: linear-gradient(to bottom, #a8a8a8, #000000);
+  }
+
   .main__div--imgsup {
-    position: relative;
-    width: 100%;
     height: auto;
   }
-  
+
+  .main__conte {
+    height: 300px;
+  }
+
   .main__banner {
-    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
   }
 
   .div__banner {
-    display: none;
-  }
-  
-  .main__imgprincipal {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
   }
-  
-.main__button {
-display: none;
-}
 
-.main__button:hover {
-  background-color: #e6c200;
-}
+  .main__banner:hover {
+    width: 110%;
+  }
+
+  .main__imgprincipal {
+    display: none;
+  }
+
+  .main__button--1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main__button {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+    align-items: center;
+    background-color: $color-paleta-4;
+    color: $color-paleta-1;
+    width: 15%;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 50px;
+
+    &:hover {
+      background-color: #e6c200;
+    }
+  }
 
   .main__mypic {
-    position: absolute;
-    top: 60px; 
-    left: 30px;
-    width: 100px; 
-    height: auto;
-    border-radius: 10px;
-    border-color: $color-paleta-1;
-    opacity: 90%;
+    top: -100px;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 100px;
   }
-  
-  .div__mypicpc,
-  .main__textpc,
-  .main__card--2 {
-    display: none;
-  }
-
-  .div__aboutme {
-    display: block;
-    width: 100%;
-    margin: 0%;
-    padding: 0%;
-
-    img {
-        display: flex;
-        width: 90%;
-        align-items: center;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        border-radius: 15px;
-        opacity: 95%;
-    }
-
-    h1 {
-        text-align: center;
-        color: $color-paleta-1;
-        margin-top: 10px;
-    }
-
-    p {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 15px;
-        text-align: center;
-        color: $color-paleta-1;
-        margin-top: 10px;
-        width: 80%;
-    }
-  }
-
-   @media (min-width: 1024px) {
-        body {
-      background: linear-gradient(to bottom, #a8a8a8, #000000);
-    }
-  
-    .main__div--imgsup {
-      height: auto;
-    }
-  
-    .main__conte {
-      height: 300px;
-    }
-  
-    .main__banner {
-            position: relative; 
-      width: 100%;
-      max-width: 1000px; 
-    }
-
-    .div__banner {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    }
-
-    .main__banner :hover {
-      width: 110%;
-    }
-  
-    .main__imgprincipal {
-      display: none;
-    }
-
-    .main__button--1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-    }
-
-    .main__button {
-  display: flex; 
-  justify-content: center; 
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  align-items: center;    
-  background-color: $color-paleta-4;
-  color: $color-paleta-1;
-  width: 15%;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  height: 50px; 
-    }
-
-.main__button:hover {
-  background-color: #e6c200;
-  }
-    .main__mypic {
-      top: -100px;
-      left: 90%;
-      transform: translate(-50%, -50%);
-      width: 100px;
-    }
 
   .div__principal {
-      display: grid;
-      grid-template-columns: auto auto; 
-      gap: 20px;
-      padding: 20px;
-      align-items: flex-start; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
   }
 
   .div__aboutme {
-          width: 100%;
-      height: auto;
-      max-height: 90vh;
-      object-fit: cover;
-      img {
-        width: 70%;
-      }
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+
+    img {
+      width: 70%;
+    }
   }
 
-    .div__aboutme--1 {
-            display: block;
-            margin-top: 20px;
+.div__aboutme--1 {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 
-      h1 {
-              margin-bottom: 15px;
-      font-size: 2em;
-      color: $color-paleta-1;
-      }
-
-      p {
-              font-size: 1.2em;
-      color: $color-paleta-1;
-      }
+  img {
+    display: flex;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    border-radius: 15px;
+    opacity: 0.95;
   }
-   }
+
+  h1 {
+    text-align: center;
+    color: $color-paleta-1;
+    margin-top: 10px;
+  }
+
+  p {
+    width: 80%;
+    margin: 10px auto 0 auto;
+    font-size: 15px;
+    text-align: center;
+    color: white; // Fuerza blanco exacto
+  }
+}
+}
